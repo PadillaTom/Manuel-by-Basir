@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Utils:
-import data from '../Utils/data';
+// import data from '../Utils/data';
+
 // Components:
 import Product from '../Components/Product';
 import LoadingBox from '../Components/LoadingBox';
