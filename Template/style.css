@@ -1,0 +1,101 @@
+/* Globals */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* 62.5% of 16px === 10px  --> We put 10px to 1rem. */
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: orange;
+}
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0rem;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0rem;
+}
+/* GRID Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background: #203040;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background: #203040;
+  color: #fff;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.center {
+  justify-content: center;
+}
+img {
+  border-radius: 0.5rem;
+}
+.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+/* Card */
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background: #fafafa;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+/* Header */
+header a {
+  color: white;
+  padding: 1rem;
+}
+.brand {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+/* Main */
+
+/* Footer */
