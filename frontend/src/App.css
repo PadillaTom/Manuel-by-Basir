@@ -60,6 +60,9 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+.row.top {
+  align-items: flex-start;
+}
 .center {
   justify-content: center;
 }
@@ -78,7 +81,7 @@ img {
   margin: 1rem;
 }
 .card-body {
-  padding: 1rem;
+  padding: 2rem;
 }
 .card-body > * {
   margin-bottom: 0.5rem;
