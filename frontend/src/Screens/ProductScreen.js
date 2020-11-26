@@ -16,7 +16,7 @@ const ProductScreen = (props) => {
       <Link to='/'>Back to Results</Link>
       <div className='row top'>
         <div className='col-2'>
-          <img src={image} alt={name} />
+          <img className='large' src={image} alt={name} />
         </div>
         <div className='col-1'>
           <ul>
@@ -49,7 +49,7 @@ const ProductScreen = (props) => {
                     {product.countInStock > 0 ? (
                       <span className='success'>In Stock</span>
                     ) : (
-                      <span className='error'>Unavailable</span>
+                      <span className='danger'>Unavailable</span>
                     )}
                   </div>
                 </div>

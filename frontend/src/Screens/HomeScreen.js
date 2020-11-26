@@ -5,24 +5,41 @@ import axios from 'axios';
 import data from '../Utils/data';
 // Components:
 import Product from '../Components/Product';
+import LoadingBox from '../Components/LoadingBox';
+import MessageBox from '../Components/MessageBox';
 
 const HomeScreen = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get('/api/products');
-      setProducts(data);
+      try {
+        setLoading(true);
+        const { data } = await axios.get('/api/products');
+        setLoading(false);
+        setProducts(data);
+      } catch (err) {
+        setError(error.message);
+        setLoading(false);
+      }
     };
     fetchData();
-  }, [products]);
+  }, []);
 
   return (
     <>
-      <div className='row center'>
-        {products.map((product) => {
-          return <Product key={product._id} product={product}></Product>;
-        })}
-      </div>
+      {loading ? (
+        <LoadingBox></LoadingBox>
+      ) : error ? (
+        <MessageBox variant='danger'>{error}</MessageBox>
+      ) : (
+        <div className='row center'>
+          {products.map((product) => {
+            return <Product key={product._id} product={product}></Product>;
+          })}
+        </div>
+      )}
     </>
   );
 };
