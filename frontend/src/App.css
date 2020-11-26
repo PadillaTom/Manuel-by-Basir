@@ -22,6 +22,33 @@ a {
 a:hover {
   color: orange;
 }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background: lightgray;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+button.primary {
+  background: #f0c040;
+}
+button.block {
+  width: 100%;
+}
+button:hover {
+  border: 0.1rem #404040 solid;
+}
 h1 {
   font-size: 1.8rem;
   padding: 1rem 0rem;
@@ -63,16 +90,27 @@ footer {
 .row.top {
   align-items: flex-start;
 }
-.center {
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+.row.center {
   justify-content: center;
 }
+/* Image */
 img {
   border-radius: 0.5rem;
 }
-.medium {
+img.medium {
   max-width: 29rem;
   width: 100%;
 }
+img.large {
+  width: 100%;
+}
+
 /* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
@@ -94,6 +132,7 @@ img {
   color: #404040;
   font-size: 1.2rem;
 }
+
 /* Header */
 header a {
   color: white;
@@ -106,6 +145,12 @@ header a {
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
-/* Main */
+/* Alert*/
+.success {
+  color: #20a020;
+}
+.error {
+  color: #a02020;
+}
 
 /* Footer */

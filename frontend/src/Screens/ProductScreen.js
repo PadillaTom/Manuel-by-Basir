@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Utils
 import data from '../Utils/data';
 // Components:
@@ -9,9 +10,10 @@ const ProductScreen = (props) => {
   if (!product) {
     <h2>Product not found</h2>;
   }
-  const { image, name, rating, numReviews, description, price } = product;
+  const { image, name, description, price } = product;
   return (
     <>
+      <Link to='/'>Back to Results</Link>
       <div className='row top'>
         <div className='col-2'>
           <img src={image} alt={name} />
@@ -36,13 +38,13 @@ const ProductScreen = (props) => {
             <ul>
               <li>
                 <div className='row'>
-                  <div>Price</div>
-                  <div className='price'>{price}</div>
+                  <div>Price: </div>
+                  <div className='price'>${price}</div>
                 </div>
               </li>
               <li>
                 <div className='row'>
-                  <div>Status</div>
+                  <div>Status: </div>
                   <div>
                     {product.countInStock > 0 ? (
                       <span className='success'>In Stock</span>
