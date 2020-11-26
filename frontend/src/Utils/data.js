@@ -18,7 +18,7 @@ const data = {
       image: '/images/p2.jpg',
       price: 150,
       brand: 'Adidas',
-      rating: 4,
+      rating: 2,
       numReviews: 10,
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
     },
@@ -40,7 +40,7 @@ const data = {
       image: '/images/p4.jpg',
       price: 120,
       brand: 'Nike',
-      rating: 4.5,
+      rating: 3,
       numReviews: 14,
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
     },
@@ -68,3 +68,5 @@ const data = {
     },
   ],
 };
+
+export default data;

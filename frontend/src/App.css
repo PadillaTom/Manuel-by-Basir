@@ -87,6 +87,10 @@ img {
   color: #f0c040;
   margin: 0.1rem;
 }
+.rating span:last-child {
+  color: #404040;
+  font-size: 1.2rem;
+}
 /* Header */
 header a {
   color: white;
