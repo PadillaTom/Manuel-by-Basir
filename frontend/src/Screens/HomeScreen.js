@@ -51,9 +51,9 @@ const HomeScreen = () => {
         <MessageBox variant='danger'>{error}</MessageBox>
       ) : (
         <div className='row center'>
-          {products.map((product) => {
-            return <Product key={product._id} product={product}></Product>;
-          })}
+          {products.map((product) => (
+            <Product key={product._id} product={product}></Product>
+          ))}
         </div>
       )}
     </>

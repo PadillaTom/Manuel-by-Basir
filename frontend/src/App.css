@@ -30,12 +30,15 @@ ul {
 li {
   margin-top: 1rem;
 }
+
 button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+button {
   background: lightgray;
   cursor: pointer;
   transition: 0.3s ease all;
@@ -46,6 +49,9 @@ button.primary {
 button.block {
   width: 100%;
 }
+input:hover,
+select:hover,
+textarea:hover,
 button:hover {
   border: 0.1rem #404040 solid;
 }
