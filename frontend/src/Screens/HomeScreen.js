@@ -41,7 +41,7 @@ const HomeScreen = () => {
 
     // REDUX:
     dispatch(listProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
