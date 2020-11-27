@@ -4,7 +4,7 @@ const {
   PRODUCT_LIST_FAIL,
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
-} = require('../Constants/productConstats');
+} = require('../Constants/productConstants');
 
 // ****** Product LIST Actions
 export const productListReducer = (

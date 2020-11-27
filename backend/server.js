@@ -7,12 +7,13 @@ const app = express();
 
 // Individual Product:
 app.get('/api/products/:id', (req, res) => {
-  const product = data.products.find((x) => x._id === req.params.id);
+  const productId = req.params.id;
+  const product = data.products.find((x) => x._id === productId);
 
   if (product) {
     res.send(product);
   } else {
-    res.status(404).send({ message: 'Product not found' });
+    res.status(404).send({ message: 'Product Not Found' });
   }
 });
 

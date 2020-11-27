@@ -6,9 +6,11 @@ import {
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_LIST_REQUEST,
-} from '../Constants/productConstats';
-import { PRODUCT_LIST_SUCCESS } from '../Constants/productConstats';
-import { PRODUCT_LIST_FAIL } from '../Constants/productConstats';
+} from '../Constants/productConstants';
+import {
+  PRODUCT_LIST_SUCCESS,
+  PRODUCT_LIST_FAIL,
+} from '../Constants/productConstants';
 
 // ******** Getting Products List as a WHOLE:
 export const listProducts = () => async (dispatch) => {

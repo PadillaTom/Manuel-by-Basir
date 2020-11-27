@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // Screens:
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
@@ -13,13 +13,13 @@ function App() {
           {/* <!-- Header --> */}
           <header className='row'>
             <div>
-              <a href='/' className='brand'>
+              <Link to='/' className='brand'>
                 Manuel
-              </a>
+              </Link>
             </div>
             <div>
-              <a href='/cart'>Cart</a>
-              <a href='/signin'>Sign In</a>
+              <Link to='/cart'>Cart</Link>
+              <Link to='/signin'>Sign In</Link>
             </div>
           </header>
           {/* <!-- Main --> */}
