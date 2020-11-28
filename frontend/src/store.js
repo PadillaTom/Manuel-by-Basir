@@ -9,7 +9,13 @@ import { cartReducer } from './Reducers/cartReducers';
 // Utils: Para Hard Code reducer before having Redux
 // import data from './Utils/data';
 
-const initialState = {};
+const initialState = {
+  cart: {
+    cartItems: localStorage.getItem('cartItems')
+      ? JSON.parse(localStorage.getItem('cartItems'))
+      : [],
+  },
+};
 
 const reducer = combineReducers({
   productList: productListReducer,

@@ -30,7 +30,6 @@ ul {
 li {
   margin-top: 1rem;
 }
-
 button {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -63,7 +62,8 @@ h2 {
   font-size: 1.6rem;
   padding: 1rem 0rem;
 }
-/* GRID Layout */
+
+/* GRID Layout for Screens */
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -105,6 +105,10 @@ footer {
 .row.center {
   justify-content: center;
 }
+.min-30 {
+  min-width: 30rem;
+}
+
 /* Image */
 img {
   border-radius: 0.5rem;
@@ -114,6 +118,10 @@ img.medium {
   width: 100%;
 }
 img.large {
+  width: 100%;
+}
+img.small {
+  max-width: 5rem;
   width: 100%;
 }
 
@@ -151,7 +159,16 @@ header a {
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
-/* Alert*/
+.badge {
+  background: #f02020;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: -0.1rem;
+}
+
+/* Alerts */
 .success {
   color: #20a020;
 }
@@ -167,9 +184,7 @@ header a {
   color: #2020a0;
   background-color: #e0e0ff;
 }
-.alert-error {
+.alert-danger {
   color: #a02020;
   background-color: #ffe0e0e0;
 }
-
-/* Footer */
