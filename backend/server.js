@@ -1,11 +1,17 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 // Utils:
 // import data from './data.js'; //--> Used before MONGO DB
 import userRouter from './Routers/userRouter.js';
 import productRouter from './Routers/productRouter.js';
 
+dotenv.config();
+
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 mongoose.connect('mongodb://localhost/manuel', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -29,6 +35,7 @@ mongoose.connect('mongodb://localhost/manuel', {
 
 // Mongo ---------->
 app.use('/api/users', userRouter);
+
 app.use('/api/products', productRouter);
 // Server
 app.get('/', (req, res) => {
