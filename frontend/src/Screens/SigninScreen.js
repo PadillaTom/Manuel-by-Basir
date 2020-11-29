@@ -1,15 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { signin } from '../Actions/userActions';
 
-const SigninScreen = () => {
+const SigninScreen = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // To redirect after logged in
+  const redirect = props.location.search
+    ? props.location.search.split('=')[1]
+    : '/';
+
+  // Get info from Redux:
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+  // Redux Stuff:
+  const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
     // Sign In:
+    dispatch(signin(email, password));
   };
-
+  useEffect(() => {
+    if (userInfo) {
+      props.history.push(redirect);
+    }
+  }, [userInfo, props.history, redirect]);
   return (
     <>
       <form className='form' onSubmit={submitHandler}>

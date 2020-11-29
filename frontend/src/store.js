@@ -5,6 +5,7 @@ import {
   productListReducer,
 } from './Reducers/productReducers';
 import { cartReducer } from './Reducers/cartReducers';
+import { userSigninReducer } from './Reducers/userReducer';
 
 // Utils: Para Hard Code reducer before having Redux
 // import data from './Utils/data';
@@ -15,12 +16,18 @@ const initialState = {
       ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
   },
+  userSignin: {
+    userInfo: localStorage.getItem('userInfo')
+      ? JSON.parse(localStorage.getItem('userInfo'))
+      : null,
+  },
 };
 
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
+  userSignin: userSigninReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
