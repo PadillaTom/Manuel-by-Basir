@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signin } from '../Actions/userActions';
+// Components:
+import LoadingBox from '../Components/LoadingBox';
+import MessageBox from '../Components/MessageBox';
 
 const SigninScreen = (props) => {
   const [email, setEmail] = useState('');
@@ -14,7 +17,7 @@ const SigninScreen = (props) => {
 
   // Get info from Redux:
   const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
+  const { userInfo, loading, error } = userSignin;
   // Redux Stuff:
   const dispatch = useDispatch();
   const submitHandler = (e) => {
@@ -33,6 +36,8 @@ const SigninScreen = (props) => {
         <div>
           <h1>Sign In</h1>
         </div>
+        {loading && <LoadingBox></LoadingBox>}
+        {error && <MessageBox>{error}</MessageBox>}
         <div>
           <label htmlFor='email'>Email Adress</label>
           <input
