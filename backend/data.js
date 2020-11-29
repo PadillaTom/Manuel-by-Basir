@@ -1,7 +1,20 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Tom',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('admin', 8),
+    },
+    {
+      name: 'TomCustomer',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('admin', 8),
+    },
+  ],
   products: [
     {
-      _id: '1',
       name: 'Nike Slim Shirt',
       category: 'Shirts',
       image: '/images/product-1.jpg',
@@ -13,7 +26,6 @@ const data = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
     },
     {
-      _id: '2',
       name: 'Adidas Slim Shirt',
       category: 'Shirts',
       image: '/images/p2.jpg',
@@ -25,7 +37,6 @@ const data = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
     },
     {
-      _id: '3',
       name: 'Puma Slim Shirt',
       category: 'Shirts',
       image: '/images/p3.jpg',
@@ -37,7 +48,6 @@ const data = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
     },
     {
-      _id: '4',
       name: 'Nike Slim Pants',
       category: 'Pants',
       image: '/images/p4.jpg',
@@ -49,7 +59,6 @@ const data = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
     },
     {
-      _id: '5',
       name: 'Puma Slim Pants',
       category: 'Pants',
       image: '/images/p5.jpg',
@@ -61,7 +70,6 @@ const data = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
     },
     {
-      _id: '6',
       name: 'Adidas Slim Pants',
       category: 'Pants',
       image: '/images/p6.jpg',
