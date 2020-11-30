@@ -48,12 +48,7 @@ button.primary {
 button.block {
   width: 100%;
 }
-input:hover,
-select:hover,
-textarea:hover,
-button:hover {
-  border: 0.1rem #404040 solid;
-}
+
 h1 {
   font-size: 1.8rem;
   padding: 1rem 0rem;
@@ -233,4 +228,17 @@ header a {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Checkout */
+.checkout-steps {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: #f08000;
+  color: #f08000;
 }
