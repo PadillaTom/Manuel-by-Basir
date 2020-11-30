@@ -5,7 +5,7 @@ import {
   productListReducer,
 } from './Reducers/productReducers';
 import { cartReducer } from './Reducers/cartReducers';
-import { userSigninReducer } from './Reducers/userReducer';
+import { userSigninReducer, userRegisterReducer } from './Reducers/userReducer';
 
 // Utils: Para Hard Code reducer before having Redux
 // import data from './Utils/data';
@@ -28,6 +28,7 @@ const reducer = combineReducers({
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userSignin: userSigninReducer,
+  userRegister: userRegisterReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

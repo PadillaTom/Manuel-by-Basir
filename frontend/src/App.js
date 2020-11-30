@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 // Screens:
 import HomeScreen from './Screens/HomeScreen';
 import SigninScreen from './Screens/SigninScreen';
+import RegisterScreen from './Screens/RegisterScreen';
 import ProductScreen from './Screens/ProductScreen';
 import CartScreen from './Screens/CartScreen';
 // Actions:
@@ -56,6 +57,7 @@ function App() {
           <main>
             <Route path='/' component={HomeScreen} exact></Route>
             <Route path='/signin' component={SigninScreen}></Route>
+            <Route path='/register' component={RegisterScreen}></Route>
             <Route path='/product/:id' component={ProductScreen}></Route>
             <Route path='/cart/:id?' component={CartScreen}></Route>
           </main>
