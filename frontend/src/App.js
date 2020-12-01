@@ -7,6 +7,7 @@ import SigninScreen from './Screens/SigninScreen';
 import RegisterScreen from './Screens/RegisterScreen';
 import ProductScreen from './Screens/ProductScreen';
 import CartScreen from './Screens/CartScreen';
+import PaymentMethodScreen from './Screens/PaymentMethodScreen';
 // Actions:
 import { signout } from './Actions/userActions';
 import ShippingAdressScreen from './Screens/ShippingAdressScreen';
@@ -63,6 +64,7 @@ function App() {
             <Route path='/cart/:id?' component={CartScreen}></Route>
             {/* Payment */}
             <Route path='/shipping' component={ShippingAdressScreen}></Route>
+            <Route path='/payment' component={PaymentMethodScreen}></Route>
           </main>
           <footer className='row center'>All rights reserved</footer>
         </div>

@@ -205,8 +205,8 @@ header a {
 }
 .form label {
   margin: 1rem 0rem;
-  display: block;
 }
+
 /* Dropdown */
 .dropdown {
   display: inline-block;
