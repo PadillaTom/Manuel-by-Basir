@@ -7,6 +7,8 @@ import CheckoutSteps from '../Components/CheckoutSteps';
 const ShippingAdressScreen = (props) => {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+
+  // To prevent Not Logged In:
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
   if (!userInfo) {
@@ -42,8 +44,8 @@ const ShippingAdressScreen = (props) => {
             type='text'
             id='fullName'
             placeholder='Enter Full Name'
-            value={fullName}
             onChange={(e) => setFullName(e.target.value)}
+            value={fullName}
             required
           />
         </div>
