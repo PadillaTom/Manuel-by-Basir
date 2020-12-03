@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 // import data from './data.js'; //--> Used before MONGO DB
 import userRouter from './Routers/userRouter.js';
 import productRouter from './Routers/productRouter.js';
+import orderRouter from './Routers/orderRouter.js';
 
 dotenv.config();
 
@@ -35,8 +36,9 @@ mongoose.connect('mongodb://localhost/manuel', {
 
 // Mongo ---------->
 app.use('/api/users', userRouter);
-
 app.use('/api/products', productRouter);
+app.use('/api/orders', orderRouter);
+
 // Server
 app.get('/', (req, res) => {
   res.send('Server is Ready');
